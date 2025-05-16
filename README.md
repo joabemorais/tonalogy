@@ -59,6 +59,11 @@ Backend (Core):
 - Custom logic engine (Kripke semantics)
 - Pytest (testing)
 
+CLI (Planned):
+
+- Lightweight command-line interface in Python
+- Allows offline or quick local analysis of chord progressions
+
 Frontend (Planned):
 
 - Rails with Hotwire (or React)
