@@ -43,6 +43,11 @@ Tonalogy Core (backend):
 - Inference engine using modal logic and Kripke semantics
 - REST API for submitting progressions and receiving analysis
 
+Tonalogy CLI (Planned):
+
+- Lightweight command-line interface in Python
+- Allows offline or quick local analysis of chord progressions
+
 Tonalogy Interface (frontend, planned):
 
 - Web interface (Rails or React)
@@ -51,18 +56,13 @@ Tonalogy Interface (frontend, planned):
 
 ## Tech Stack
 
-Backend (Core):
+Backend (Core) and CLI:
 
 - Python 3.11+
 - FastAPI (RESTful API)
 - Pydantic (data modeling)
 - Custom logic engine (Kripke semantics)
 - Pytest (testing)
-
-CLI (Planned):
-
-- Lightweight command-line interface in Python
-- Allows offline or quick local analysis of chord progressions
 
 Frontend (Planned):
 
