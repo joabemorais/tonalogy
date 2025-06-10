@@ -14,6 +14,8 @@ This system is also being developed as part of the undergraduate thesis entitled
 > “Uma Implementação Computacional para Análise de Tonalidade
 em Progressões Harmônicas via Semântica de Mundos Possíveis”
 >
+> [A Computational Implementation for Tonality Analysis in Harmonic Progressions via Possible Worlds Semantics]
+>
 > Universidade Federal do Ceará – Campus Quixadá
 >
 > Author: Antônio Joabe Alves Morais
@@ -36,38 +38,34 @@ and along which possible tonal transitions.
 
 ## Architecture
 
-Tonalogy is composed of two layers:
+Tonalogy's architecture is divided into backend components and clients, following the principle of separation of concerns.
 
-Tonalogy Core (backend):
+### Backend Components
+- *Tonalogy Core*: This is the inference engine, responsible for all the music analysis logic. It receives a progression and returns structured data (JSON) with the complete semantic analysis, without concerning itself with visual presentation.
+- *Tonalogy Visualizer*: This is the rendering module. It receives the structured data from the Core and translates it into harmonic analysis diagrams, like the ones seen in this chat. It is responsible for all SVG manipulation and final image generation.
+- *Tonalogy API*: The web layer (FastAPI) that serves as the gateway to the backend services. It exposes endpoints that clients can consume to get both the raw analysis data (from the Core) and the rendered diagrams (from the Visualizer).
 
-- Inference engine using modal logic and Kripke semantics
-- REST API for submitting progressions and receiving analysis
-
-Tonalogy CLI (Planned):
-
-- Lightweight command-line interface in Python
-- Allows offline or quick local analysis of chord progressions
-
-Tonalogy Interface (frontend, planned):
-
-- Web interface (Rails or React)
-- Allows users to enter progressions, view tonal paths, cadences, and explanations
-- Visual representations of modulation graphs and modal truth spaces
+### Clients (API Consumers)
+- *Tonalogy Interface* (frontend, planned): A web interface that allows users to input progressions, view detailed analyses, and visualize diagrams of tonal paths, cadences, and modulations.
+- *Tonalogy CLI* (in development): A command-line tool for quick tests and obtaining analyses in text format, ideal for development and integration.
 
 ## Tech Stack
 
-Backend (Core) and CLI:
+Backend:
+- Core & API:
+  - Python 3.11+
+  - FastAPI (RESTful API)
+  - Pydantic (data modeling)
+  - Pytest (testing)
 
-- Python 3.11+
-- FastAPI (RESTful API)
-- Pydantic (data modeling)
-- Custom logic engine (Kripke semantics)
-- Pytest (testing)
+- Visualizer:
+  - Python 3.11+
+  - Graphviz (graph layout engine)
+  - CairoSVG (library for SVG to PNG conversion)
 
 Frontend (Planned):
-
-- Rails with Hotwire (or React)
-- SVG/Canvas rendering of harmonic paths
+- Next.js (React) or another modern JavaScript framework
+- Rendering of images (PNG) or directly of SVG data
 - Visualization of tonal worlds, modulations, and modal truth values
 
 ## References
