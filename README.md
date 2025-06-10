@@ -46,7 +46,7 @@ Tonalogy's architecture is divided into backend components and clients, followin
 - **Tonalogy API**: The web layer (FastAPI) that serves as the gateway to the backend services. It exposes endpoints that clients can consume to get both the raw analysis data (from the Core) and the rendered diagrams (from the Visualizer).
 
 ### Clients (API Consumers)
-- **Tonalogy Interface** (frontend, planned): A web interface that allows users to input progressions, view detailed analyses, and visualize diagrams of tonal paths, cadences, and modulations.
+- **[Tonalogy Interface](https://github.com/joabemorais/tonalogy-interface)** (frontend, planned): A web interface that allows users to input progressions, view detailed analyses, and visualize diagrams of tonal paths, cadences, and modulations.
 - **Tonalogy CLI** (in development): A command-line tool for quick tests and obtaining analyses in text format, ideal for development and integration.
 
 ## Tech Stack
