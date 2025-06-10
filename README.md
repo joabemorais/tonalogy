@@ -40,14 +40,14 @@ and along which possible tonal transitions.
 
 Tonalogy's architecture is divided into backend components and clients, following the principle of separation of concerns.
 
-### Backend Components
-- *Tonalogy Core*: This is the inference engine, responsible for all the music analysis logic. It receives a progression and returns structured data (JSON) with the complete semantic analysis, without concerning itself with visual presentation.
-- *Tonalogy Visualizer*: This is the rendering module. It receives the structured data from the Core and translates it into harmonic analysis diagrams, like the ones seen in this chat. It is responsible for all SVG manipulation and final image generation.
-- *Tonalogy API*: The web layer (FastAPI) that serves as the gateway to the backend services. It exposes endpoints that clients can consume to get both the raw analysis data (from the Core) and the rendered diagrams (from the Visualizer).
+### [Backend Components](https://github.com/joabemorais/tonalogy-api/)
+- **Tonalogy Core**: This is the inference engine, responsible for all the music analysis logic. It receives a progression and returns structured data (JSON) with the complete semantic analysis, without concerning itself with visual presentation.
+- **Tonalogy Visualizer**: This is the rendering module. It receives the structured data from the Core and translates it into harmonic analysis diagrams, like the ones seen in this chat. It is responsible for all SVG manipulation and final image generation.
+- **Tonalogy API**: The web layer (FastAPI) that serves as the gateway to the backend services. It exposes endpoints that clients can consume to get both the raw analysis data (from the Core) and the rendered diagrams (from the Visualizer).
 
 ### Clients (API Consumers)
-- *Tonalogy Interface* (frontend, planned): A web interface that allows users to input progressions, view detailed analyses, and visualize diagrams of tonal paths, cadences, and modulations.
-- *Tonalogy CLI* (in development): A command-line tool for quick tests and obtaining analyses in text format, ideal for development and integration.
+- **Tonalogy Interface** (frontend, planned): A web interface that allows users to input progressions, view detailed analyses, and visualize diagrams of tonal paths, cadences, and modulations.
+- **Tonalogy CLI** (in development): A command-line tool for quick tests and obtaining analyses in text format, ideal for development and integration.
 
 ## Tech Stack
 
